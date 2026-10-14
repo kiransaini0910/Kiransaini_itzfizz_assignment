@@ -33,14 +33,20 @@ body {
 }
 
 /* Individual Card Styling */
+/* Base Card Styling */
 .card {
+    padding: 24px 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+}
 
-    /* Yellow Card */
+
 .yellow-card { 
     background-color: #d1ff33; 
     color: #111; 
     width: 240px; 
-    justify-content: flex-end;
 }
 
 /* Dark Card */
@@ -48,7 +54,6 @@ body {
     background-color: #2b2b2b; 
     color: #fff; 
     width: 320px; 
-    justify-content: flex-end;
 }
 
 /* Blue Card */
@@ -56,17 +61,17 @@ body {
     background-color: #5bc0de; 
     color: #111; 
     width: 200px; 
-    justify-content: flex-end;
 }
 
 /* Orange Card */
-.orange-card { 
+.orange-card 
+{ 
     background-color: #f97316; 
     color: #111; 
     width: 280px; 
-    justify-content: flex-end;
 }
-    padding: 24px 30px;
+.card {   
+padding: 24px 30px;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     opacity: 0;
@@ -93,7 +98,7 @@ body {
 /* Banner Container & Strips */
 .banner-container {
     position: relative;
-    width: 100%; /* Ab ye poori screen ki width le lega kyunki hero-section ki padding hat chuki hai */
+    width: 100%;
     height: 180px;
     overflow: hidden;
     display: flex;
@@ -123,7 +128,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30x;
+    width: 30px;
     height: 100%;
     background-color: #2ecc71;
     display: flex;
