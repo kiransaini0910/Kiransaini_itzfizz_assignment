@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Main Hero Section */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0px;
+}
+
+/* Stats Containers */
+.stats-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 950px;
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+
+    /* Yellow Card */
+.yellow-card { 
+    background-color: #d1ff33; 
+    color: #111; 
+    width: 240px; 
+    justify-content: flex-end;
+}
+
+/* Dark Card */
+.dark-card { 
+    background-color: #2b2b2b; 
+    color: #fff; 
+    width: 320px; 
+    justify-content: flex-end;
+}
+
+/* Blue Card */
+.blue-card { 
+    background-color: #5bc0de; 
+    color: #111; 
+    width: 200px; 
+    justify-content: flex-end;
+}
+
+/* Orange Card */
+.orange-card { 
+    background-color: #f97316; 
+    color: #111; 
+    width: 280px; 
+    justify-content: flex-end;
+}
+    padding: 24px 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card h2 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Card Colors */
+.yellow-card { background-color: #d1ff33; color: #111; }
+.dark-card { background-color: #2b2b2b; color: #fff; }
+.blue-card { background-color: #5bc0de; color: #111; }
+.orange-card { background-color: #f97316; color: #111; }
+
+/* Banner Container & Strips */
+.banner-container {
+    position: relative;
+    width: 100%; /* Ab ye poori screen ki width le lega kyunki hero-section ki padding hat chuki hai */
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.road-strip {
+    position: absolute;
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 1;
+    justify-content: flex-end;
+}
+
+.green-strip {
+    background-color: #2ecc71;
+    padding: 50px 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.green-patti-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30x;
+    height: 100%;
+    background-color: #2ecc71;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 2;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+}
+
+.moving-text {
+    font-size: 130px;
+    font-weight: 950;
+    letter-spacing: 4px;
+    display: inline-block;
+    padding-left: 60px;
+}
+
+.black-text {
+    color: transparent;
+}
+
+.color-text {
+    color: #060606; /* color text */
+}
+
+/* car positioning */
+.car-wrapper {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-55%);
+    z-index: 10;
+}
+
+.car-image {
+    width: 350px;
+    height: auto;
+    display: block;
+}

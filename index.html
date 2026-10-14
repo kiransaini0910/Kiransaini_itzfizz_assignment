@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Saini - Scroll Animation - Staggered Reveal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="hero-section">
+        
+        <!-- Top Stats Cards -->
+        <div class="stats-container top-stats">
+            <div class="card yellow-card">
+                <h2>58%</h2>
+                <p>Increase in pick up point use</p>
+            </div>
+            <div class="card dark-card">
+                <h2>27%</h2>
+                <p>Increase in pick up point use</p>
+            </div>
+        </div>
+
+        <!-- Center Road Banner with Reveal Effect -->
+        <div class="banner-container">
+            <div class="road-strip">
+                <div class="moving-text black-text">WELCOME ITZFIZZ &nbsp;&nbsp;&nbsp; WELCOME ITZFIZZ</div>
+            </div>
+            <div class="green-patti-reveal">
+                <div class="moving-text color-text">WELCOME ITZFIZZ &nbsp;&nbsp;&nbsp; WELCOME ITZFIZZ</div>
+            </div>
+            <div class="car-wrapper">
+                <img src="car.png" alt="Sports Car" class="car-image">
+            </div>
+        </div>
+
+        <!-- Bottom Stats Cards -->
+        <div class="stats-container bottom-stats">
+            <div class="card blue-card">
+                <h2>23%</h2>
+                <p>Decreased in customer phone calls</p>
+            </div>
+            <div class="card orange-card">
+                <h2>40%</h2>
+                <p>Decreased in customer phone calls</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- GSAP Animation Script -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".hero-section",
+                start: "top top",
+                end: "+=1100",
+                scrub: true,
+                pin: true
+            }
+        });
+
+        // 1. Car ko move karna
+        tl.to(".car-wrapper", {
+            x: "90vw", 
+            ease: "none"
+        }, 0);
+
+        // 2. Green Patti Text Effect reveal karna
+        tl.to(".green-patti-reveal", {
+            maskImage: "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%)",
+            ease: "none"
+        }, 0);
+
+        // 3. Cards Sequence Animation
+        tl.to([".yellow-card", ".blue-card", ".dark-card", ".orange-card"], {
+            opacity: 1,
+            y: 0,
+            stagger: 0.15,
+            ease: "power2.out",
+            duration: 0.5
+        }, 0.2);
+    </script>
+
+</body>
+</html>
