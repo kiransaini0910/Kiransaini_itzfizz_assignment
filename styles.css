@@ -53,14 +53,14 @@ body {
 .dark-card { 
     background-color: #2b2b2b; 
     color: #fff; 
-    width: 320px; 
+    width: 240px; 
 }
 
 /* Blue Card */
 .blue-card { 
     background-color: #5bc0de; 
     color: #111; 
-    width: 200px; 
+    width: 280px; 
 }
 
 /* Orange Card */
